@@ -36,7 +36,13 @@ app.use("/penilaianakhir", penilaianAkhirRoute);
 app.use("/perbandinganmurid", PerbandinganMuridRoute);
 app.use("/bobotmurid", BobotMuridRoute);
 app.use("/auth", authRoute);
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-  connectDb();
+
+app.get("/", (req, res) => {
+  res.send("API Online 🚀");
+});
+
+connectDb().then(() => {
+  app.listen(PORT, () => {
+    console.log("✅ Backend running on port:", PORT);
+  });
 });
