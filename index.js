@@ -38,7 +38,7 @@ app.use("/bobotmurid", BobotMuridRoute);
 app.use("/auth", authRoute);
 
 app.get("/", (req, res) => {
-  res.send("API Online 🚀");
+  res.send("API SPK MURID ONLINE");
 });
 
 connectDb().then(() => {
