@@ -20,7 +20,7 @@ const PORT = process.env.PORT;
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: ["http://localhost:5173", "http://localhost:5174", "https://spk-ahp-pemilihan-murid.vercel.app/"],
     credentials: true,
   })
 );
